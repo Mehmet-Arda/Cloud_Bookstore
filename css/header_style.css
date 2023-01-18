@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.6s;
+    z-index: 200;
+    font-family: "Montserrat",sans-serif;
+    padding: 30px 130px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.568);
+
+}
+
+
+header::after{
+    clear: both;
+    display: table;
+    content: "";
+    
+}
+
+header.sticky{
+    padding: 0px 160px;
+    background: #f1f1f1;
+    border-bottom: 0;
+    z-index: 200;
+    box-shadow: 1px 3px 28px rgba(0, 0, 0, 0.733);
+}
+
+
+header.sticky .nav_li_logo .logo{
+    color: #000;
+  
+}
+
+header.sticky  ul .nav_li_a{
+    color: #000;
+}
+
+header.sticky .nav_li_profile .profile_off_div,header.sticky .nav_li_basket .basket{
+    border-radius: 0px;
+}
+
+
+header.sticky #basket,header.sticky #profile_off_icon{
+    
+    color: #455a64;
+}
+
+header #basket,header #profile_off_icon{
+    
+    color: white;
+}
+
+header.sticky .basket:hover #basket,header.sticky .profile_off_div:hover #profile_off_icon {
+    color: white;
+}
+
+.nav_li_profile .profile_off_div:hover,.nav_li_basket .basket:hover{
+    
+    background-color: #455a64;
+}
+
+.profile_off_div.active{
+    background-color: #455a64;
+    color: white;
+}
+.profile_off_div.active #profile_off_icon{
+    
+    color: white;
+}
+
+header .nav_li_logo{
+    
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    margin: 8px 30px;
+    
+}
+
+
+header .nav_li_logo img{
+    
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+header .nav_li_logo .logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    padding: 5px 10px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    display: inline-block;
+    font-weight: 900;
+   
+}
+
+.nav_li_right{
+    position: relative;
+    float: right;
+}
+header ul{
+    position: relative;
+   
+}
+
+header ul .nav_li{
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    margin: 0px 6px;
+    transition: 0.3s;
+    
+}
+
+header .nav_li.active a::before{
+    width: 6px;
+    height: 100%;
+}
+
+header .nav_li.active a::after{
+    width: 6px;
+    height: 100%;
+}
+
+header .nav_li.active .nav_li_a{
+    background-color: #455a64;
+    color: white;
+}
+
+header .nav_li_a.active a{
+    background-color: #455a64;
+    color: white;
+}
+
+
+header ul .nav_li_a::before{
+    content: "";
+    width: 0px;
+    height: 100%;
+    bottom: 0;
+    left: 0px;
+    
+    z-index: 102;
+    position: absolute;
+    background-color: white;
+    transition: 0.3s;
+}
+
+header.sticky ul .nav_li_a::before{
+    background-color:black;
+    
+}
+
+header ul .nav_li_a:hover::before{
+    width: 6px;
+    height: 100%;
+   
+}
+
+header ul .nav_li_a::after{
+    content: "";
+    width: 0px;
+    height: 100%;
+    bottom: 0;
+    right: 0px;
+    
+    z-index: 102;
+    position: absolute;
+    background-color: white;
+    transition: 0.3s;
+}
+
+header.sticky ul .nav_li_a::after{
+    background-color:black;
+}
+
+header ul .nav_li_a:hover::after{
+    width: 6px;
+    height: 100%;
+   
+}
+
+
+
+
+header ul .nav_li_a{
+    position: relative;
+    
+    text-decoration: none;
+    color: #fff;
+    
+    font-size: 20px;
+    display: inline-block;
+    
+    padding: 25px 30px;
+    
+    
+    letter-spacing: 1px;
+    font-weight: 100px;
+    
+    transition: 0.3s;
+    
+}
+
+
+header ul .nav_li_a:hover {
+    background-color: #455a64;
+    
+    color: white;
+}
+
+header ul .nav_li_profile,header ul .nav_li_basket{
+    position: relative;
+    
+    text-decoration: none;
+   
+    cursor: pointer;
+    list-style: none;
+    float: right;
+    margin: 0px 10px;
+    border-radius: 100px;
+    font-weight: 200px;
+    transition: 0.3s;
+    
+}
+
+.nav_li_basket{
+    margin-left: 60px!important;
+}
+
+header ul .nav_li_profile .profile_off_div ,header ul .nav_li_basket .basket{
+    position: relative;
+    
+    text-decoration: none;
+    
+    padding: 22px;
+    font-size: 6px;
+    
+    display: inline-block;
+    
+    border-radius: 100px;
+    letter-spacing: 1px;
+    font-weight: 100px;
+    transition: 0.3s;
+}
+
+.profile-menu{
+    position: absolute;
+    top: 120px;
+    right: -3px;
+    width: 230px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    transition: 0.5s;
+    padding: 18px;
+
+    
+    opacity: 0;
+    visibility: hidden;
+}
+
+.profile-menu.active{
+    
+    top: 90px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.profile-menu::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+
+}
+
+.profile-menu h3{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.profile-menu h3 span{
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+}
+
+.profile-menu ul li{
+    list-style: none;
+    padding: 15px 18px 15px 5px;
+    border-top:1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+
+}
+
+.profile-menu ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+    
+}
+
+.profile-menu ul li:hover img{
+    opacity: 1;
+}
+
+.profile-menu ul li:hover a{
+    color: #297eff;
+}
+
+
+.profile-menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+
+}
+
+
+
+
+#basket, #profile_off_icon{
+    color: white;
+    font-size: 30px;
+    transition: 0.3s;
+
+}
+
+.nav_li:nth-of-type(3):hover .nav_li_a_sub{
+    
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+.nav_li_a_sub{
+    
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    width: 260px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 4px 4px 4px 4px;
+    transition: 0.6s;
+    padding: 14px;
+   
+    visibility: hidden;
+    opacity: 0;
+
+
+}
+
+.nav_li_a_sub2{
+   
+    
+    position: absolute;
+    top: 111px;
+    left: 250px;
+    width: 260px;
+    height: 400px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 4px 4px 4px 4px;
+    transition: 0.6s;
+    padding: 14px;
+
+    color: black;
+    overflow-y: scroll;
+    
+    visibility: hidden;
+    opacity: 0;
+   
+}
+
+.nav_li_a_sub2 a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.nav_li_a_sub li:nth-child(3):hover .nav_li_a_sub2{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav_li_a_sub ul li{
+    list-style: none;
+    padding: 18px 0px 18px 0px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.nav_li_a_sub ul li:hover {
+    background-color: #a7c0cd;
+    
+    
+}
+
+
+
+@media screen and (max-width:1880px) {
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+    header.sticky{
+        padding: 0px 15px;
+    }
+
+    header ul .nav_li{
+        
+        margin: 0px 5px;
+        
+        
+    }
+    
+ 
+
+    header .nav_li_logo{
+        margin: 8px 10px;
+    }
+
+}
